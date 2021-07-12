@@ -32,7 +32,7 @@ app.post('/api/upload-file', async (req, res) => {
                 message: 'No file uploaded'
             });
         } else {
-            let file = req.files.file;
+            let file = req.files.fileKey;
             file.mv('./uploads/' + file.name);
             res.send({
                 status: true,
